@@ -11,7 +11,8 @@ export class PagenotfoundComponent implements OnInit {
   courseid:any;
   constructor(private activeRoute: ActivatedRoute) {}
   ngOnInit() {
-      this.courseid=this.activeRoute.snapshot.params['id'];
+      // this.courseid=this.activeRoute.snapshot.params['id'];
+      this.courseid=this.activeRoute.snapshot.paramMap.get('id')
       console.log(this.courseid,"courseid")
   }
 }
