@@ -10,10 +10,13 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 
 const routes:Routes=[
-  {path:'home',component:AppComponent},
+  // {path:'home',component:AppComponent},
   {path:'firstcomponent',component:FirstComponent},
   {path:'secondcomponent',component:SecondComponent},
-  {path:'firstcomponent/course/:id',component:PagenotfoundComponent},
+  {path:'firstcomponent',children:[
+    {path:'course/:id',component:PagenotfoundComponent}
+  ]},
+  // {path:'firstcomponent/course/:id',component:PagenotfoundComponent},
   {path:'**',component:PagenotfoundComponent}
   // {path:'**',Component:PagenotfoundComponent}
 ]
