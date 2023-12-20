@@ -1,4 +1,4 @@
-import { Component,OnInit,  } from '@angular/core';
+import { Component,OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 
@@ -9,6 +9,25 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'testmadewithnode16';
+  search:any;
+  constructor(private activeRoute:ActivatedRoute){}
+  ngOnInit(){
+    this.activeRoute.fragment.subscribe((data)=>{
+      // console.log(data,"fragment route")
+      this.jumpToSection(data)
+    })
+    // this.search=this.activeRoute.snapshot.queryParams['search'];
+    // console.log(this.search,"search");
+  }
+  jumpToSection(data: string | null) {
+    console.log(data,"data")
+    if (data) {
+      const element = document.getElementById(data);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
 }
