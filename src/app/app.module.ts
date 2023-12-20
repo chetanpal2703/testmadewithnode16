@@ -6,6 +6,7 @@ import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { RoutingModule } from './routing.module';
+import { PercentagePipes } from './Pipes/percentage.pipes';
 // const routes:Routes=[
 //   // {path:'home',component:AppComponent},
 //   {path:'firstcomponent',component:FirstComponent},
@@ -22,7 +23,8 @@ import { RoutingModule } from './routing.module';
     AppComponent,
     FirstComponent,
     SecondComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    PercentagePipes
   ],
   imports: [
     BrowserModule,

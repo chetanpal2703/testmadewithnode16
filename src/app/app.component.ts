@@ -11,7 +11,9 @@ import { ActivatedRoute } from '@angular/router';
 
 export class AppComponent implements OnInit {
   title = 'testmadewithnode16';
+  testpipe=0.8817;
   search:any;
+  pipeschecking="i am here";
   constructor(private activeRoute:ActivatedRoute){}
   ngOnInit(){
     this.activeRoute.fragment.subscribe((data)=>{
